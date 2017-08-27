@@ -57,5 +57,12 @@ class Main {
         } else {
             System.out.println("São diferentes");
         }
+
+        /**
+         * Exercicio 7
+         */
+        Funcionario funcionario3 = new Funcionario();
+        funcionario3.nome = "Neusa Villas Boas Magrinelli";
+        funcionario3.mostra();
     }
 }
