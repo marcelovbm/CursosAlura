@@ -26,9 +26,9 @@ class Funcionario {
     *   Exercício 3
     */
     void mostra (){
-        System.out.println("Nome: " + this.nome + "\n" + 
-        "Salario: " + this.salario + "\n" +
-        "Data de Entrada no Banco: " + this.data.dia + "/" + this.data.mes + "/" + this.data.ano +
-        "RG: " + this.rg);
+        System.out.println("Nome: " + this.nome +
+        "\nSalario: " + this.salario +
+        "\nData de Entrada no Banco: " + this.data.getFormatada() +
+        "\nRG: " + this.rg);
     }
 }
