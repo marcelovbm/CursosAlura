@@ -1,22 +1,8 @@
 module.exports = function (app) {
     
-    console.log("Modulo de Rotas dos Produtos carregada!");
-    app.get('/produtos', function(req, res) {
-        var mysql = require('mysql');
+        app.get('/produtos', function(req, res) {
 
-        console.log('listando...');
-
-        var connection = mysql.createConnection({
-            host : 'localhost',
-            user : 'root',
-            password : '',
-            database :  'casadocodigo_nodejs'
-        });
-        
-        connection.connect(function(err) {
-            if (err) throw err;
-            console.log("Connected!");
-          });
+        var connection = app.infra.dbConnection();
 
         connection.query('select * from produtos', function(err, results){
             // res.send(results);
@@ -26,4 +12,6 @@ module.exports = function (app) {
         connection.end();
         //res.render('produtos/lista');
     });
+
+    console.log("Modulo de Rotas dos Produtos carregada!");
 }
